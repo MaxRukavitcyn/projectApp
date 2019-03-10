@@ -7,7 +7,7 @@ CREATE TABLE users (
 
 CREATE SEQUENCE user_seq;
 
-ALTER TABLE users ALTER COLUMN id SET DEFAULT nextval('public.users_seq');
+ALTER TABLE users ALTER COLUMN id SET DEFAULT nextval('public.user_seq');
 ALTER SEQUENCE user_seq OWNED BY users.id;
 
 
@@ -51,7 +51,7 @@ ALTER SEQUENCE user_roles_role_id_seq OWNED BY user_roles.role_id;
 
 -- Insert data
 
-INSERT INTO users VALUES (1, 'proselyte', '$2a$11$uSXS6rLJ91WjgOHhEGDx..VGs7MkKZV68Lv5r1uwFu7HgtRn3dcXG');
+INSERT INTO users VALUES (1, 'maxhand', '$2a$11$uSXS6rLJ91WjgOHhEGDx..VGs7MkKZV68Lv5r1uwFu7HgtRn3dcXG');
 
 INSERT INTO roles VALUES (1, 'ROLE_USER');
 INSERT INTO roles VALUES (2, 'ROLE_ADMIN');
